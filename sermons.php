@@ -889,6 +889,9 @@ function render_wpfc_sermon_single() {
 				
 		<?php wpfc_sermon_files(); ?>
 		
+        <?php if ( get_wpfc_sermon_meta('sermon_audio') ) {
+         echo '<a href="' . get_wpfc_sermon_meta('sermon_audio') . '">Download</a> <br /> (Right click and "Save As" to save this sermon)';} ?>
+        
 		<?php wpfc_sermon_description(); ?>
 		
 		<?php wpfc_sermon_attachments(); ?>
